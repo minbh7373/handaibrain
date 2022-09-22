@@ -1,0 +1,35 @@
+[[Basic Explanation]]
+
+ I am working on a project which we take signals from the brain, and then detect the peak, then output a bool signal according to the detection I have been working on this project with first the dummy data(random data) and I succeeded somewhat, but when I tried to work on this with the actual data(not realtime, but it has to be realtime for the final result) the accuracy wasn't quite good. So I am asking you to improve the accuracy of the detection.
+
+Please refer to the picture(Requirement.png) that I sent.
+
+
+[[Requirements]]
+
+
+1.PC
+The PC below is going to be used
+PCI-6154
+https://www.ni.com/ja-jp/support/model.pci-6154.html
+
+
+2. I will now explain what the program have to do.
+
+a. After the input of the signal, the signal have to filtered in this range.
+-> proc_params.ripple_frequency    = [70 180] ->The unit is Hz
+
+b. After filtering the signal, the peak has to be detected. The peak here is called 'ripple'.  Now I will explain the definition of the peak that we are trying to detect here is. 
+-> Take the rms(root mean square) for 2000ms(name this rms1) and the rms for 8ms(name this rms2).
+When rms2 is bigger than the 4 times of rms1 for 8ms consecutively, we call this a ripple. This ratio of rms2 and rms1 is not fixed for defining a 'ripple', but 4 times is the ratio that we define here. 
+
+c. The sampling rate is 2kHz, so one data point is feeded after 0.5ms passes from when the previous data point is feeded. 
+-> proc_params.sampling_rate       = 2000; 
+
+This is basically what needs to be done.
+
+3. Because the data is going to be feeded through TCP.IP, I need you to make this program's input data to be feeded through TCP.IP
+
+
+[[Debugging]]
+To evaluate that your program is working well, please check the data with the CSV file that I will send you. I will send you the input data(raw_signal_edited_onecolumn.csv), and the result data(online_detection_threshold4.csv).

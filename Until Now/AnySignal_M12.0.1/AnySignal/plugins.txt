@@ -1,0 +1,4 @@
+Sine Wave	sine	llb
+Random Signal	random	llb
+DC Offset	dc	llb
+Multiple Tones	tones	llb

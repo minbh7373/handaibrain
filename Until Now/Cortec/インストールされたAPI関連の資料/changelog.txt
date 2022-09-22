@@ -1,0 +1,131 @@
+Version 0.65
+============
+* Integration of medical device implant library bicimplant3232h
+
+Version 0.64
+===================
+* Mavenized project
+
+Version 0.56 - 0.63
+===================
+* no changes
+
+Version 0.55
+===================
+* upgraded build system
+
+Version 0.49 - 0.53
+===================
+* no changes
+
+Version 0.48
+===================
+* Upgraded to VS 2015
+
+Version 0.46 - 0.47
+===================
+* CSample redesigned to avoid memory leaks
+* implantapi: many minor changes which should improve overall usability 
+              the interface should be stable again
+* Fixed SHE exception during exception propagation of API functions
+
+Version 0.45
+===================
+* Added more code examples to API documentation.
+* Bugfix: uninstall now removes all files.
+ 
+Version 0.45
+===================
+* removed obsolote projects, especially BCI2000 support.
+
+Version 0.44
+===================
+* no changes.
+
+Version 0.43
+===================
+* no changes.
+
+Version 0.42
+===================
+* implantapi: several refactorings of exceptions and interface
+* Property sheets now used exclusively from CortecDevInstaller.
+* Upgrade to Qt 5.5.1, gmock 1.7.0, gtest 1.7.0
+
+Version 0.40 - 0.41
+===================
+* no changes.
+
+Version 0.39.0
+==============
+* support for BIC32/32 (IRDA and standard version)
+* Finalized boiler plate license
+* Fixed bug in example (BRNF-146)
+
+=======================
+Version 0.35.0 - 0.38.0
+* No Changes
+
+Version 0.34.0
+==============
+* automatic version number generation.
+
+Version 0.30.0 - 0.33.0
+=======================
+* No Changes
+
+Version 0.29.0
+==============
+* implantApiTypes removed in favour of stdint types
+
+Version 0.12.0-0.28.0
+=====================
+no changes
+
+Version 0.11.0
+==============
+* BCI2000
+  o Command for stopping an active stimulation added
+  o Bugfix: "States are inaccessible at this time"
+
+Version 0.10.0
+==============
+* BCI2000-programmers-guide updated
+* Bugfix: BCI2000 Matlab module struggles with state names starting with '_' (they start now with a leading 'p')
+
+Version 0.9.0
+=============
+* BCI2000-programmers-guide is now available
+
+
+Version 0.8.0
+=============
+* BCI2000 API
+  o The state StimulationActive indicates now when a stimulation is active
+  o The logging of the stimulation parameters has been improved. The states
+    U1-U4, T1-T4, Repetitions and Channel are written at the start of the stimulation
+    as _U1-_U4, _T1-_T4, _Repetitions and _Channel to the log file (0 when the stimulation is completed)
+  o Stimulation voltages U1-U4 are in mV now
+
+Version 0.7.0
+=============
+* Installer can deploy BCI2000 SourceModule and examples into an existing BCI2000 installation
+* BCI2000 API
+  o Stimulation functionality added 
+  o DummyStimulator example designed to assist programmers implementing their own stimulation needs
+
+Version 0.6.0
+=============
+* Installer for API deployment created
+* BCI2000 API 
+  o is now available
+  o can measure and record 16/8 Implant data
+  o Implant channels can be selected via GUI
+
+Version 0.7.0
+=============
+* BCI2000 API
+  o Dummy stimulation filter added 
+  o Stimulation function implemented utilizing BCI2000 states
+* C++ API
+  o Bugfix 16/8: Stimulation atoms with duration  < 1ms throw an exception now
